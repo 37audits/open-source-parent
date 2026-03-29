@@ -28,7 +28,7 @@
 
 	<groupId>com.37audits</groupId>
 	<artifactId>open-source-parent</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>37 Audits :: Open Source Parent</name>
 	<description>A parent POM for 37 Audits open source projects.</description>
@@ -47,7 +47,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/37audits/open-source-parent.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/37audits/open-source-parent.git</developerConnection>
-		<tag>1.0.1</tag>
+		<tag>HEAD</tag>
 		<url>https://github.com/37audits/open-source-parent</url>
 	</scm>
 
