@@ -103,6 +103,26 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<configuration combine.self="override">
+						<properties>
+							<owner>37 Audits</owner>
+							<email>thiago.moreira@37audits.com</email>
+						</properties>
+						<licenseSets>
+							<licenseSet>
+								<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+								<excludes>
+									<exclude>**/README</exclude>
+									<exclude>src/test/resources/**</exclude>
+									<exclude>src/main/resources/**</exclude>
+								</excludes>
+							</licenseSet>
+						</licenseSets>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-dependency-plugin</artifactId>
 					<version>3.8.1</version>
@@ -217,22 +237,14 @@
 			<plugin>
 				<groupId>com.mycila</groupId>
 				<artifactId>license-maven-plugin</artifactId>
-				<configuration combine.self="override">
-					<properties>
-						<owner>37 Audits</owner>
-						<email>thiago.moreira@37audits.com</email>
-					</properties>
-					<licenseSets>
-						<licenseSet>
-							<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
-							<excludes>
-								<exclude>**/README</exclude>
-								<exclude>src/test/resources/**</exclude>
-								<exclude>src/main/resources/**</exclude>
-							</excludes>
-						</licenseSet>
-					</licenseSets>
-				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
